@@ -47,6 +47,8 @@ predictions = model.predict(datos_nuevos)
 6. Ejecutar la API Flask
 Para ejecutar la API Flask que permite hacer predicciones a través de solicitudes HTTP, asegúrate de que las rutas sean correctas en app.py
 
+El contenido del archivo "categorizador/app.py"
+
 from flask import Flask, request, jsonify
 from categorizador.predictor import Predictor
 import os
@@ -79,7 +81,7 @@ def predict():
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 
-Para ejecutar la API Flask, usa el siguiente comando: python app.py
+Para ejecutar la API Flask, usa el siguiente comando: python categorizador/app.py
 
 La API estará disponible en http://0.0.0.0:5000/predict.
 
